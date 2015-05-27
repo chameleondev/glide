@@ -1,0 +1,22 @@
+<div class="col-md-12">
+	
+	<h1>Messages</h1>
+
+</div>
+
+<ul class="col-md-12 messages-view">
+	 <li ng-repeat="message in messages">
+        <!-- exit a message -->
+        <input ng-model="message.text" ng-change="messages.$save(message)" />
+        <!-- delete message -->
+        <button ng-click="messages.$remove(message)">X</button>
+      </li>
+</ul>
+
+<!-- push a new message into the array -->
+<form class="mesasges-form" ng-submit="addMessage(newMessageText)">
+  <input class="username-field" ng-model="username" placeholder="username" />
+  <input class="message-field" ng-model="newMessageText" placeholder="message"/>
+  <button type="submit">add message</button>
+</form>
+

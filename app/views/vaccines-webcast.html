@@ -1,0 +1,16 @@
+<div class="slides">
+    <section ui-view="slideOne" class="intro section"></section>
+    <section ui-view="slideTwo"></section>
+    <section ui-view="slideThree" class="line-chart-section"></section>
+    <section ui-view="slideFour" class="video-section"></section>
+    <section ui-view="slideFive" class="feedback-section"></section>
+</div>
+
+<div ng-show="state === 'admin'">
+	<a id="up" class="navigate-up webcast-nav"></a>
+	<a id="down"class="navigate-down webcast-nav"></a>
+	<a id="left" class="navigate-left webcast-nav"></a>
+	<a id="right"class="navigate-right webcast-nav"></a>
+</div>
+
+

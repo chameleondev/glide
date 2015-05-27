@@ -1,0 +1,25 @@
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+    <button style="position:absolute;left:-58px" id="showRight" side-bar push="no">show right</button>
+
+   
+            
+            <!-- <ul class="nav nav-tabs" role="tablist">
+              <li ng-repeat="panel in panels" ui-sref-active="active" style="text-transform:capitalize;"><a ui-sref="{{state}}.{{panel}}">{{panel}}</a></li>
+            </ul> -->
+			<div class="col-md-12"></div>
+
+			<button ng-click="authClient.$logout()" class="pull-right">Logout</button>
+			
+            <ul class="nav nav-tabs col-md-12" role="tablist">
+
+			  <li  ng-repeat="panel in panels"><a href="#{{panel}}" onclick="return false" role="tab" data-toggle="tab">{{panel}}</a></li>
+			</ul>
+
+    
+	
+    <div class="tab-content col-md-12">
+		<div class="tab-pane" ng-repeat="panel in panels" id="{{panel}}" ui-view="{{panel}}"></div>
+
+	</div>
+
+</nav>
